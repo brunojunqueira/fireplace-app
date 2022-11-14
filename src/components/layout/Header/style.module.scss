@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding-inline: 50px;
+}
+
+.background__on{
+    background-color: #000;
+}
+
+.background__off{
+    background-color: transparent;
+}
