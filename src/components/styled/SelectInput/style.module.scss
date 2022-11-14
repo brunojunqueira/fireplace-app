@@ -1,0 +1,11 @@
+@use '/src/style/colors';
+
+.container{
+    height: 3rem;
+
+    .alert{
+        color: colors.$red;
+        font-size: .8rem;
+    }
+}
+

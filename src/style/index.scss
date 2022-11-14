@@ -1,0 +1,13 @@
+@use '/src/style/colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: colors.$white;
+  background-color: colors.$black;
+}

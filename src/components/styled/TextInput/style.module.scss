@@ -1,0 +1,54 @@
+@use '/src/style/colors';
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    flex-direction: column-reverse;
+    height: 3rem;
+    padding-top: 1rem;
+
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: colors.$white;
+
+    label {
+        position: absolute;
+        top: 1.2rem;
+        cursor: text;
+        transition: .25s ease-in-out;
+    }
+
+    input{
+        background: transparent;
+        padding: .2rem 0;
+        border: 0;
+        outline: 0;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: colors.$white;
+        border-bottom: 1px solid white;
+        
+        &::placeholder{
+            color: transparent;
+        }
+
+        &:focus ~ label, &:not(:placeholder-shown) ~ label {
+            top: 0;
+            font-size: .8rem;
+            color: colors.$white-800;
+        }
+
+        &[type=password]::-ms-reveal, &[type=password]::-ms-clear {
+            display: none;
+        }
+
+    }
+    .alert{
+        position: absolute;
+        bottom: 0;
+        color: colors.$red;
+        font-size: .8rem;
+    }
+}
+

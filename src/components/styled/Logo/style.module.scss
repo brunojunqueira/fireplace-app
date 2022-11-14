@@ -1,0 +1,55 @@
+@use '/src/style/colors';
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+.container{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.gap__lg{
+    gap: 30px;
+}
+
+.gap__md{
+    gap: 20px;
+}
+
+.gap__sm{
+    gap: 15px;
+}
+
+.img__lg{
+    width: 77.8px;
+    height: 70px; 
+}
+
+.img__md{
+    width: 63px;
+    height: 56.22px;
+}
+
+.img__sm{
+    width: 46.12px;
+    height: 41.5px;
+}
+
+span {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: colors.$red;
+}   
+
+.text__lg{
+    font-size: 90px;
+}
+
+.text__md{
+    font-size: 64px;
+}
+
+.text__sm{
+    font-size: 48px;
+}
