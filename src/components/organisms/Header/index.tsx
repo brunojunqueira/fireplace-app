@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Logo from '../../styled/Logo';
-import HeaderItems from './HeaderItems';
+import Logo from '../../atoms/Logo';
+import Navbar from '../../molecules/Navbar';
 import style from './style.module.scss';
-import UserMenu from './UserMenu';
+import UserMenu from '../../molecules/UserMenu';
 
 export default function Header() {
 
@@ -25,8 +25,8 @@ export default function Header() {
 
   return (
     <div className={`${style.header} ${style['background__'+isBackgroundVisible]}`}>
-      <Logo size='sm'/>
-      <HeaderItems />
+      <Logo size='xs'/>
+      <Navbar />
       <UserMenu />
     </div>
   )

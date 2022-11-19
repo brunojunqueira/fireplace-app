@@ -1,5 +1,5 @@
 export default function UserMenu() {
   return (
-    <div>index</div>
+    <div>Clarice Linspector</div>
   )
 }

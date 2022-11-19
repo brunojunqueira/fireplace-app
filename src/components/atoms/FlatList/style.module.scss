@@ -1,0 +1,54 @@
+@use '/src/style/fonts';
+@use '/src/style/colors';
+
+.container {
+    margin-top: 2.5rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    & > p {
+        font-size: fonts.$text-lg;
+    }
+
+    .content {
+        margin-top: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.50rem;
+        background: colors.$grey;
+        padding: 1rem 0;
+        font-weight: 600;
+
+        border-radius: 0.75rem;
+
+        hr {
+            border-color: colors.$grey-200;
+        }
+
+        .item {
+            font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.25rem;
+
+            & > .authorImage {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 1.25rem;
+                background: colors.$grey-light;
+            }
+
+            & > span {
+                color: colors.$white;
+                font-weight: 500;
+            }
+
+            & > .postQuantity {
+                color: colors.$white-800;
+            }
+        }
+    }
+}
