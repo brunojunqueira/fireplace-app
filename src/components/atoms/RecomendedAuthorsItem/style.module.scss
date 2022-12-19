@@ -1,0 +1,78 @@
+@use "/src/style/fonts";
+@use "/src/style/colors";
+
+.trendingItem {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+
+  .authorField {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .authorImage {
+      width: 45px;
+      height: 45px;
+
+      border-radius: 50%;
+
+      background: colors.$grey-light;
+    }
+
+    .profileField {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 5px;
+
+      .authorName {
+        font-size: fonts.$text-md;
+        font-weight: 400;
+      }
+
+      .readers {
+        color: colors.$white-600;
+        font-size: fonts.$text-sm;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .followersQuantity {
+    color: colors.$white-800;
+  }
+
+  .followField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    .followButton {
+      width: 65px;
+      height: 20px;
+
+      border-radius: 10rem;
+
+      font-size: fonts.$text-sm;
+      font-weight: semi-bold;
+    }
+    span {
+      color: colors.$white-600;
+      font-size: fonts.$text-sm;
+      font-weight: 400;
+
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

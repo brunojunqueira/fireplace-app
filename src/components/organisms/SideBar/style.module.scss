@@ -1,17 +1,17 @@
 .container{
-    position: fixed;
-    width: 20%;
+    top: 100px;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 33.3%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow-anchor: none;
+    padding-inline: 9%;
 
-    overflow: hidden;
-
-    padding-top: 150px;
-    padding-inline: 3rem;
-
-    @media (max-width: 1024px) {
-        padding-top: 0;
-        padding-inline: 0;
+    @media (max-width: 1280px) {
+        padding-inline: 3%;
     }
 }

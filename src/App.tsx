@@ -18,8 +18,8 @@ function App() {
     <BrowserRouter>
       <Provider store={store}>
         <Header/>
-        <SideBar/>
         <div className={style.app}>
+          <SideBar/>
           <Routes>
             <Route path="/" element={ <Feed /> } />
             <Route path="/stories" element={ <Stories /> } />
