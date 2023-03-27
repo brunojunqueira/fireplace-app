@@ -1,0 +1,14 @@
+@use "/src/style/colors";
+
+.component {
+  width: 100%;
+  padding: 0.5rem;
+  color: colors.$white;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  font-size: 24px;
+  &:focus {
+    outline: none;
+  }
+}

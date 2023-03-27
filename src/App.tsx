@@ -1,35 +1,63 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import { lazy, Suspense } from "react";
 
-import style from './style/app.module.scss';
+import style from "./style/app.module.scss";
 
-import Feed from './pages/Feed';
+import Header from "./components/organisms/Header";
+import SideBar from "./components/organisms/SideBar";
 
-import Header from './components/organisms/Header';
-import SideBar from './components/organisms/SideBar';
-import Stories from './pages/Stories';
-import Books from './pages/Books';
-import Search from './pages/Search';
+const Feed = lazy(() => import("./pages/Feed"));
+const Stories = lazy(() => import("./pages/Stories"));
+const Books = lazy(() => import("./pages/Books"));
+const Search = lazy(() => import("./pages/Search"));
 
 function App() {
-
-  return (      
+  return (
     <BrowserRouter>
       <Provider store={store}>
-        <Header/>
+        <Header />
         <div className={style.app}>
-          <SideBar/>
+          <SideBar />
           <Routes>
-            <Route path="/" element={ <Feed /> } />
-            <Route path="/stories" element={ <Stories /> } />
-            <Route path="/books" element={ <Books /> } />
-            <Route path="/search" element={ <Search /> } />
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<></>}>
+                  <Feed />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/stories"
+              element={
+                <Suspense fallback={<></>}>
+                  <Stories />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/books"
+              element={
+                <Suspense fallback={<></>}>
+                  <Books />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/search"
+              element={
+                <Suspense fallback={<></>}>
+                  <Search />
+                </Suspense>
+              }
+            />
           </Routes>
         </div>
       </Provider>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

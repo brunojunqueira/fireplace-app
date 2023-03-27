@@ -1,7 +1,10 @@
+import CreatePost from "../../components/molecules/CreatePost";
+import style from "./style.module.scss";
+
 export default function Feed() {
   return (
-    <div>
-      FEED
+    <div className={style.page}>
+      <CreatePost />
     </div>
-  )
+  );
 }
