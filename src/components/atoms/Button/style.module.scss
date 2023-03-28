@@ -1,28 +1,29 @@
-@use '/src/style/colors';
-@use '/src/style/fonts';
+@use "/src/style/colors";
+@use "/src/style/fonts";
 
-.button{
-    padding-block: 15px;
-    height: fit-content;
-    width: 100%;
+.button {
+  padding-block: 15px;
+  height: fit-content;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background-color: colors.$red;
+  background-color: colors.$red;
 
-    font-family: 'Inter', sans-serif;
-    font-size: fonts.$text-md;
-    font-weight: bold;
+  font-family: "Inter", sans-serif;
+  font-size: fonts.$text-md;
+  font-weight: bold;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    border-radius: 5px;
+  border-radius: 5px;
 
+  color: colors.$white;
+
+  &:hover {
+    background-color: colors.$red-800;
     color: colors.$white;
-
-    &:hover{
-        background-color: colors.$red-800;
-    }
+  }
 }

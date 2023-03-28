@@ -1,0 +1,15 @@
+@use "../../../style/colors";
+
+.minibutton {
+  position: relative;
+  width: 3rem;
+}
+
+.label {
+  position: absolute;
+  bottom: -25px;
+  background-color: colors.$grey;
+  color: colors.$white;
+  padding: 5px;
+  border-radius: 5px;
+}

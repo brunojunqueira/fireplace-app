@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Button from "../../atoms/Button";
+import CircleProgressbar from "../../atoms/CircleProgressbar";
+import MiniButton from "../../atoms/MiniButton";
 import TextArea from "../../atoms/TextArea";
 import style from "./style.module.scss";
 
@@ -19,8 +21,22 @@ export default function CreatePost() {
         />
       </div>
       <div className={style.publish_field}>
-        <span>{counter}/400</span>
-        <Button>Publicar</Button>
+        <CircleProgressbar
+          width={45}
+          percentage={counter / 4}
+          primaryColor={["#f00", "#f33"]}
+        >
+          {counter > 0 && <span style={{ fontSize: "10px" }}>{counter}</span>}
+        </CircleProgressbar>
+        <div className={style.publish_field__minibuttons_field}>
+          <MiniButton label="Emoji" icon="ic:outline-emoji-emotions" />
+          <MiniButton
+            label="Programar"
+            icon="material-symbols:calendar-add-on"
+          />
+          <MiniButton label="Mídia" icon="icon-park-solid:add-pic" />
+        </div>
+        <Button className={style.publish_field__button}>Publicar</Button>
       </div>
     </div>
   );
